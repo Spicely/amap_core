@@ -1,9 +1,7 @@
 part of amap_core;
 
 class Location {
-  final double? latitude;
-
-  final double? longitude;
+  final LatLng? latLng;
 
   /// 地址
   final String? address;
@@ -26,9 +24,14 @@ class Location {
   /// 精准度 [在web端直接返回0]
   final double? accuracy;
 
+  /// 城市编码
+  final String? cityCode;
+
+  /// 地址编码
+  final String? adCode;
+
   Location({
-    this.latitude,
-    this.longitude,
+    this.latLng,
     this.accuracy,
     this.address,
     this.city,
@@ -36,6 +39,8 @@ class Location {
     this.district,
     this.street,
     this.province,
+    this.cityCode,
+    this.adCode,
   });
 
   factory Location.fromJson(Map<dynamic, dynamic> json) => _$LocationFromJson(json);
@@ -45,8 +50,7 @@ class Location {
 
 Location _$LocationFromJson(Map<dynamic, dynamic> json) {
   return Location(
-    latitude: (json['latitude'] as num?)?.toDouble(),
-    longitude: (json['longitude'] as num?)?.toDouble(),
+    latLng: LatLng((json['latitude'] as num?)?.toDouble() ?? 0.0, (json['longitude'] as num?)?.toDouble() ?? 0.0),
     accuracy: (json['accuracy'] as num?)?.toDouble(),
     address: json['address'] as String?,
     city: json['city'] as String?,
@@ -54,12 +58,13 @@ Location _$LocationFromJson(Map<dynamic, dynamic> json) {
     district: json['district'] as String?,
     street: json['street'] as String?,
     province: json['province'] as String?,
+    cityCode: json['cityCode'] as String?,
+    adCode: json['adCode'] as String?,
   );
 }
 
 Map<String, dynamic> _$LocationToJson(Location instance) => <String, dynamic>{
-      'latitude': instance.latitude,
-      'longitude': instance.longitude,
+      'latLng': instance.latLng?.toJson(),
       'address': instance.address,
       'country': instance.country,
       'city': instance.city,
@@ -67,4 +72,6 @@ Map<String, dynamic> _$LocationToJson(Location instance) => <String, dynamic>{
       'district': instance.district,
       'accuracy': instance.accuracy,
       'province': instance.province,
+      'cityCode': instance.cityCode,
+      'adCode': instance.adCode,
     };
