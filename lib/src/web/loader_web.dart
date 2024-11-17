@@ -3,20 +3,20 @@ library amap_loader;
 
 import 'package:js/js.dart';
 
-/// 高德地图 Loader js
-external load(LoaderOptions options);
+// /// 高德地图 Loader js
+// external load(LoaderOptions options);
 
-@JS()
-@anonymous
-class LoaderOptions {
-  external factory LoaderOptions({
-    ///您申请的key值
-    String key,
+// @JS()
+// @anonymous
+// class LoaderOptions {
+//   external factory LoaderOptions({
+//     ///您申请的key值
+//     String key,
 
-    /// JSAPI 版本号
-    String version,
+//     /// JSAPI 版本号
+//     String version,
 
-    /// 同步加载的插件列表
-    List<String> plugins,
-  });
-}
+//     /// 同步加载的插件列表
+//     List<String> plugins,
+//   });
+// }
