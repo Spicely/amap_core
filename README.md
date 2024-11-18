@@ -6,4 +6,7 @@
 
 地图组件的全部类定义包
 
-支持web、android、ios
+支持 web、android、ios
+
+dart run build_runner build
+dart run build_runner build --delete-conflicting-outputs

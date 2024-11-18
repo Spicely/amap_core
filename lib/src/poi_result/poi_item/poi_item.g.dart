@@ -27,9 +27,9 @@ PoiItem _$PoiItemFromJson(Map<String, dynamic> json) => PoiItem(
       business: json['business'] == null
           ? null
           : Business.fromJson(json['business'] as Map<String, dynamic>),
-      poiNavi: (json['poiNavi'] as List<dynamic>?)
-          ?.map((e) => PoiNavi.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      poiNavi: json['poiNavi'] == null
+          ? null
+          : PoiNavi.fromJson(json['poiNavi'] as Map<String, dynamic>),
       photos: (json['photos'] as List<dynamic>?)
           ?.map((e) => Photo.fromJson(e as Map<String, dynamic>))
           .toList(),

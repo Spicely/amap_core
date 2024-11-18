@@ -1,12 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import '../../../amap_core.dart';
-import '../../lat_lng/lat_lng.dart';
-import '../business/business.dart';
-import '../indoor_data/indoor_data.dart';
-import '../photo/photo.dart';
-import '../poi_navi/poi_navi.dart';
-import '../sub_poi_item/sub_poi_item.dart';
 
 part 'poi_item.g.dart';
 
@@ -40,7 +34,7 @@ class PoiItem {
 
   final Business? business;
 
-  final List<PoiNavi>? poiNavi;
+  final PoiNavi? poiNavi;
 
   final List<Photo>? photos;
 
