@@ -1,24 +1,24 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../../lat_lng/lat_lng.dart';
+import '../../../amap_core.dart';
 
 part 'search_bound.g.dart';
 
 @JsonSerializable()
 class SearchBound {
-  final LatLng? center;
+  final LatLonPoint? center;
 
   final int? range;
 
   final String? shape;
 
-  final LatLng? lowerLeft;
+  final LatLonPoint? lowerLeft;
 
-  final LatLng? upperRight;
+  final LatLonPoint? upperRight;
 
   final bool? isDistanceSort;
 
-  final List<LatLng>? polyGonList;
+  final List<LatLonPoint>? polyGonList;
 
   SearchBound({
     this.center,

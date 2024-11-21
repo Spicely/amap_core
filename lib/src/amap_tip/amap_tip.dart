@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../lat_lng/lat_lng.dart';
+import '../../amap_core.dart';
 
 part 'amap_tip.g.dart';
 
@@ -21,7 +21,7 @@ class AMapTip {
   /// 类型编码
   final String? typeCode;
 
-  final LatLng? latLng;
+  final LatLonPoint? latLng;
 
   /// 所属区域
   final String? district;

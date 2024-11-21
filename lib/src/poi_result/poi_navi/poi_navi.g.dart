@@ -7,12 +7,8 @@ part of 'poi_navi.dart';
 // **************************************************************************
 
 PoiNavi _$PoiNaviFromJson(Map<String, dynamic> json) => PoiNavi(
-      exit: json['exit'] == null
-          ? null
-          : LatLng.fromJson(json['exit'] as Map<String, dynamic>),
-      enter: json['enter'] == null
-          ? null
-          : LatLng.fromJson(json['enter'] as Map<String, dynamic>),
+      exit: json['exit'] == null ? null : LatLonPoint.fromJson(json['exit'] as Map<String, dynamic>),
+      enter: json['enter'] == null ? null : LatLonPoint.fromJson(json['enter'] as Map<String, dynamic>),
       gridCode: json['gridCode'] as String?,
       naviPoiID: json['naviPoiID'] as String?,
     );

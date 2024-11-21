@@ -1,7 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../lat_lng/lat_lng.dart';
-import '../poi_result/indoor_data/indoor_data.dart';
+import '../../amap_core.dart';
 
 part 'amap_poi.g.dart';
 
@@ -67,7 +66,7 @@ class AMapPoi {
   /// 所在商圈
   final String? businessArea;
 
-  final LatLng? latLng;
+  final LatLonPoint? latLng;
 
   /// 区
   final String? district;

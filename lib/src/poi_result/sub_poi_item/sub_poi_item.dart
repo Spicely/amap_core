@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../../lat_lng/lat_lng.dart';
+import '../../../amap_core.dart';
 
 part 'sub_poi_item.g.dart';
 
@@ -14,7 +14,7 @@ class SubPoiItem {
 
   final String? snippet;
 
-  final LatLng? latLonPoint;
+  final LatLonPoint? latLonPoint;
 
   final String? subTypeDes;
 

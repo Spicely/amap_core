@@ -1,14 +1,14 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../../lat_lng/lat_lng.dart';
+import '../../../amap_core.dart';
 
 part 'poi_navi.g.dart';
 
 @JsonSerializable()
 class PoiNavi {
-  final LatLng? exit;
+  final LatLonPoint? exit;
 
-  final LatLng? enter;
+  final LatLonPoint? enter;
 
   final String? gridCode;
 

@@ -17,25 +17,13 @@ PoiItem _$PoiItemFromJson(Map<String, dynamic> json) => PoiItem(
       cityName: json['cityName'] as String?,
       cityCode: json['cityCode'] as String?,
       adCode: json['adCode'] as String?,
-      indoorData: json['indoorData'] == null
-          ? null
-          : IndoorData.fromJson(json['indoorData'] as Map<String, dynamic>),
-      latLonPoint: json['latLonPoint'] == null
-          ? null
-          : LatLng.fromJson(json['latLonPoint'] as Map<String, dynamic>),
+      indoorData: json['indoorData'] == null ? null : IndoorData.fromJson(json['indoorData'] as Map<String, dynamic>),
+      latLonPoint: json['latLonPoint'] == null ? null : LatLonPoint.fromJson(json['latLonPoint'] as Map<String, dynamic>),
       adName: json['adName'] as String?,
-      business: json['business'] == null
-          ? null
-          : Business.fromJson(json['business'] as Map<String, dynamic>),
-      poiNavi: json['poiNavi'] == null
-          ? null
-          : PoiNavi.fromJson(json['poiNavi'] as Map<String, dynamic>),
-      photos: (json['photos'] as List<dynamic>?)
-          ?.map((e) => Photo.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      subPois: (json['subPois'] as List<dynamic>?)
-          ?.map((e) => SubPoiItem.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      business: json['business'] == null ? null : Business.fromJson(json['business'] as Map<String, dynamic>),
+      poiNavi: json['poiNavi'] == null ? null : PoiNavi.fromJson(json['poiNavi'] as Map<String, dynamic>),
+      photos: (json['photos'] as List<dynamic>?)?.map((e) => Photo.fromJson(e as Map<String, dynamic>)).toList(),
+      subPois: (json['subPois'] as List<dynamic>?)?.map((e) => SubPoiItem.fromJson(e as Map<String, dynamic>)).toList(),
     );
 
 Map<String, dynamic> _$PoiItemToJson(PoiItem instance) => <String, dynamic>{

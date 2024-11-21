@@ -28,7 +28,7 @@ class PoiItem {
 
   final IndoorData? indoorData;
 
-  final LatLng? latLonPoint;
+  final LatLonPoint? latLonPoint;
 
   final String? adName;
 

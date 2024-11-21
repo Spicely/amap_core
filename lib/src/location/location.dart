@@ -1,12 +1,12 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../lat_lng/lat_lng.dart';
+import '../../amap_core.dart';
 
 part 'location.g.dart';
 
 @JsonSerializable()
 class Location {
-  final LatLng? latLng;
+  final LatLonPoint? latLng;
 
   /// 地址
   final String? address;
