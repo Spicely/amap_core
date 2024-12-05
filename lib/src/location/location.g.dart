@@ -7,7 +7,9 @@ part of 'location.dart';
 // **************************************************************************
 
 Location _$LocationFromJson(Map<String, dynamic> json) => Location(
-      latLng: json['latLng'] == null ? null : LatLonPoint.fromJson(json['latLng'] as Map<String, dynamic>),
+      latLng: json['latLng'] == null
+          ? null
+          : LatLonPoint.fromJson(json['latLng'] as Map<String, dynamic>),
       accuracy: (json['accuracy'] as num?)?.toDouble(),
       address: json['address'] as String?,
       city: json['city'] as String?,

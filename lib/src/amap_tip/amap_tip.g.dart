@@ -12,7 +12,9 @@ AMapTip _$AMapTipFromJson(Map<String, dynamic> json) => AMapTip(
       adCode: json['adCode'] as String?,
       address: json['address'] as String?,
       typeCode: json['typeCode'] as String?,
-      latLng: json['latLng'] == null ? null : LatLonPoint.fromJson(json['latLng'] as Map<String, dynamic>),
+      latLng: json['latLng'] == null
+          ? null
+          : LatLonPoint.fromJson(json['latLng'] as Map<String, dynamic>),
       district: json['district'] as String?,
     );
 

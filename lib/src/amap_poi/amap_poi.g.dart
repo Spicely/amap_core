@@ -24,9 +24,13 @@ AMapPoi _$AMapPoiFromJson(Map<String, dynamic> json) => AMapPoi(
       cityCode: json['cityCode'] as String?,
       adCode: json['adCode'] as String?,
       direction: json['direction'] as String?,
-      indoorData: json['indoorData'] == null ? null : IndoorData.fromJson(json['indoorData'] as Map<String, dynamic>),
+      indoorData: json['indoorData'] == null
+          ? null
+          : IndoorData.fromJson(json['indoorData'] as Map<String, dynamic>),
       businessArea: json['businessArea'] as String?,
-      latLng: json['latLng'] == null ? null : LatLonPoint.fromJson(json['latLng'] as Map<String, dynamic>),
+      latLng: json['latLng'] == null
+          ? null
+          : LatLonPoint.fromJson(json['latLng'] as Map<String, dynamic>),
       name: json['name'] as String?,
       district: json['district'] as String?,
     );
