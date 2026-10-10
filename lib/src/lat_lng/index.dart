@@ -5,7 +5,7 @@ part of amap_core;
 
 // @JsonSerializable()
 class LatLng {
-  LatLng(this.latitude, this.longitude);
+  const LatLng(this.latitude, this.longitude);
 
   final double latitude;
   final double longitude;

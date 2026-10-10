@@ -24,6 +24,15 @@ class Location {
   /// 精准度 [在web端直接返回0]
   final double? accuracy;
 
+  /// 海拔高度 (单位: 米)
+  final double? altitude;
+
+  /// 移动速度 (单位: 米/秒)
+  final double? speed;
+
+  /// 方向角 (0 ~ 360°)
+  final double? bearing;
+
   /// 城市编码
   final String? cityCode;
 
@@ -33,6 +42,9 @@ class Location {
   Location({
     this.latLng,
     this.accuracy,
+    this.altitude,
+    this.speed,
+    this.bearing,
     this.address,
     this.city,
     this.country,
@@ -52,6 +64,9 @@ Location _$LocationFromJson(Map<dynamic, dynamic> json) {
   return Location(
     latLng: LatLng((json['latitude'] as num?)?.toDouble() ?? 0.0, (json['longitude'] as num?)?.toDouble() ?? 0.0),
     accuracy: (json['accuracy'] as num?)?.toDouble(),
+    altitude: (json['altitude'] as num?)?.toDouble(),
+    speed: (json['speed'] as num?)?.toDouble(),
+    bearing: (json['bearing'] as num?)?.toDouble(),
     address: json['address'] as String?,
     city: json['city'] as String?,
     country: json['country'] as String?,
@@ -71,6 +86,9 @@ Map<String, dynamic> _$LocationToJson(Location instance) => <String, dynamic>{
       'street': instance.street,
       'district': instance.district,
       'accuracy': instance.accuracy,
+      'altitude': instance.altitude,
+      'speed': instance.speed,
+      'bearing': instance.bearing,
       'province': instance.province,
       'cityCode': instance.cityCode,
       'adCode': instance.adCode,
